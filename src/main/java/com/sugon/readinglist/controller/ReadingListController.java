@@ -23,7 +23,6 @@ public class ReadingListController {
 
     @Autowired
     private ReadingListRepository readingListRepository;
-
 /*    @Autowired
     public ReadingListController(ReadingListRepository readingListRepository){
         this.readingListRepository = readingListRepository;
