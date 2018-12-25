@@ -29,15 +29,15 @@ public class ReadingListController {
         this.readingListRepository = readingListRepository;
     }*/
 
-/*    @RequestMapping(value = "/{reader}",method = RequestMethod.GET)
+    @RequestMapping(value = "/{reader}",method = RequestMethod.GET)
     public String readersBooks(@PathVariable String reader, Model model){
         List<Book> readingList = readingListRepository.findByReader(reader);
         if (readingList != null) {
             model.addAttribute("books",readingList);
         }
         return "readingList";
-    }*/
-    @RequestMapping(value = "/{reader}",method = RequestMethod.GET)
+    }
+/*    @RequestMapping(value = "/{reader}",method = RequestMethod.GET)
     public String readersBooks(@PathVariable String reader){
         ModelAndView modelAndView = new ModelAndView(reader);
         List<Book> readingList = readingListRepository.findByReader(reader);
@@ -45,7 +45,7 @@ public class ReadingListController {
             modelAndView.addObject("books",readingList);
         }
         return "readingList";
-    }
+    }*/
 
     @RequestMapping(value = "/{reader}",method = RequestMethod.POST)
     public String addToReadingList(@PathVariable String reader,Book book){
